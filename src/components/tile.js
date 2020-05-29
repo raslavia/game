@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Tile({ tile: { color, bc, id }, clickMe }) {
+const Tile = ({ tile: { color, bc, id }, clickMe }) => {
   return (
     <div
       className="tile-container"
@@ -12,5 +12,6 @@ function Tile({ tile: { color, bc, id }, clickMe }) {
       {color}
     </div>
   );
-}
+};
+
 export default Tile;
