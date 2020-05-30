@@ -7,6 +7,7 @@ const Round = ({ round, playAgain }) => {
     playAgain();
     window.location.reload();
   };
+  console.log('round');
   return (
     <React.Fragment>
       {round === 9 ? <button onClick={clickRefresh}>PLAY MORE</button> : <h2>ROUND : {round}</h2>}
@@ -20,4 +21,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(null, mapDispatchToProps)(Round);
+export default React.memo(connect(null, mapDispatchToProps)(Round));
